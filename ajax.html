@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script>
+            $(document).ready(function () {
+                $("button").click(function () {
+                    //post (url,data,callback)
+                 $.post(
+                     "first.html",
+                     {
+                         name: "Cristian Ionescu",
+                         city: "Bucharest",
+                     },
+                     function (data, status) {
+                         alert("Data: " + data + "nStatus: " + status);
+                     }
+                 );
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <button>Click me!</button>
+    </body>
+</html>
